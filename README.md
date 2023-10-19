@@ -37,3 +37,12 @@ const Container= "div"
 
 # slot 
 sirven para crear contenido dentro de la etiquetas o componentes
+
+# rutas dinamicas y estaticas
+
+-- rutas estaticas : son por defectos e crean normalmente con el / nombre del archivo que se quire acceder
+
+-- rutas dinamicas : se debe configurar el  output para que se generen las rutas dinamicamente por defecto es static
+export default defineConfig({
+    output:"server"
+});

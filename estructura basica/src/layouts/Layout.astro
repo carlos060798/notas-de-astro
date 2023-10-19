@@ -17,6 +17,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+	  <nav>
+	    <a href="/">Home</a>
+	    <a href="/about">About</a>
+	  </nav>
 		<slot />
 	</body>
 </html>
@@ -34,7 +38,6 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
 		background-size: 224px;
 	}
 	code {
