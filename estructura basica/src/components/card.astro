@@ -1,0 +1,42 @@
+---
+const Container= "div"
+
+export interface CardProps {
+  image?: string;
+  title: string;
+  description: string;
+}
+
+const { image, title, description } = Astro.props
+---
+<Container class="card">
+
+    <img src="img/image.png" alt="image" class="card__image">
+
+    <h2>{title}</h2>
+  <p>{description}</p>
+  <slot/>
+
+</Container>
+
+<style>
+
+.card {
+  background-color: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: auto;
+  position: relative;
+  width: 300px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.22), 0 1px 2px rgba(0,0,0,0.24);
+  margin-left:20%;
+}
+.card:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+}
+img{
+    height: 500px;
+    object-fit: cover;
+}
+</style>
