@@ -7,7 +7,7 @@
       "@componets/*":["./src/components/*"],
 
      
-    }
-
-}
+    },
+   
+},
 }
