@@ -1,12 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Movie from '../components/Movie.astro';
-import Search from '../components/Search';
+import Layout from "../layouts/Layout.astro";
+import Movie from "../components/Movie.astro";
+import Search from "../components/Search";
 ---
 
 <Layout title="Welcome to Astro.">
-	<h1>hola</h1>
-	<Movie/>
-	<Search client:load/>
-</Layout>
+  <h2 class="text-center my-5">Peliculas Favoritas</h2>
 
+  <Movie />
+</Layout>

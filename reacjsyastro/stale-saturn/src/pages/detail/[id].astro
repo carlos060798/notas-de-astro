@@ -17,24 +17,26 @@ const youtube="https://www.youtube.com/embed/"
 ---
 
 <Layaut title="Detalle de pelicula">
+  <div class="container">
   <div class="row mt-5">
-    <div class="card-ms-4" style="width: 18rem;">
-      <img
-        src={`https://image.tmdb.org/t/p/w300/${data.poster_path}`}
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Titulo: {data.original_title}</h5>
-        <p class="card-text">Lenguaje: {data.original_language}</p>
-
-        <p class="card-text">Descripcion: {data.overview}</p>
-        <p class="card-text">Popularidad: {data.popularity}</p>
+    <div class="col-md-6">
+      <div class="d-flex ">
+      <div></div>
+        <img src={`https://image.tmdb.org/t/p/w300/${data.poster_path}`} class="mr-3" alt="..." />
+        <div>
+          <h5 class="card-title">Título: {data.original_title}</h5>
+          <p class="card-text">Lenguaje: {data.original_language}</p>
+          <p class="card-text">Descripción: {data.overview}</p>
+          <p class="card-text">Popularidad: {data.popularity}</p>
+        </div>
+      </div>
       </div>
     </div>
-     <iframe src=`https://www.youtube.com/embed/${video.key}`
-     height="400" width="400">
-
-     </iframe>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <iframe src={`https://www.youtube.com/embed/${video.key}`} height="400" width="100%"></iframe>
+    </div>
+  </div>
   </div>
 </Layaut>
