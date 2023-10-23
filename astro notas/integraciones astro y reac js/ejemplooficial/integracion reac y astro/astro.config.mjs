@@ -4,12 +4,10 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-    output: 'server',
-    integrations: [
-        react({
-            include: ['**/react/*'],
-          }),
-      ],
-    
+    integrations: [react()],
+    redirects: {// Redirecciones de rutas  programados
+        '/old-page': '/new-page'
+      }
 
 });
+
