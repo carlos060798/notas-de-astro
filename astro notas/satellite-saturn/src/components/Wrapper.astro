@@ -1,0 +1,17 @@
+---
+// en este componente se muestra  el funcionameinto del slot con nombres
+const { titulo } = Astro.props
+
+---
+
+<div id="content-wrapper">
+    <header>
+        <h1>hola</h1>
+    </header>
+    <slot name="after-header"/>  <!--  hijos con el atributo `slot="after-header"` van aquí -->
+    <p>soy imagen</p>
+    <h1>{titulo}</h1>
+    <slot />  <!--  hijos sin `slot`, o con el atributo `slot="default"` van aquí -->
+    <footer>soy el final</footer>
+    <slot name="after-footer"/>  <!--  hijos con el atributo `slot="after-footer"` van aquí -->
+  </div>
